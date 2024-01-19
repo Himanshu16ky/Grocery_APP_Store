@@ -1,0 +1,8 @@
+id,item,price,category_name,stock_left,stock_sold
+103,Radish,50,Vegetables,94,1
+104,Potato,30,Vegetables,99,1
+105,Onion,80,Vegetables,100,
+106,Cauliflower,40,Vegetables,95,4
+108,Custard apple,60,Fruits,100,
+110,Banana,40,Fruits,98,3
+146,Amul Silk,100,Chochlate,98,1

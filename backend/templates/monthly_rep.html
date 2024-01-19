@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Monthly Activity Report</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        p {
+            font-size: 19px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        {% if has_orders %}
+        <p>
+            Time for your monthly review.
+        </p>
+        <hr />
+        <br>
+        <p><b>Quick Summary</b></p>
+
+
+        <section>
+
+
+            <div class="">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col col-lg-9 col-xl-7">
+                        <div class="card rounded-3">
+                            <div class="card-body p-4">
+
+
+                                <table class="table mb-4">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th scope="col">S.No</th> -->
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Item Count</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Expiration Date</th>
+                                            <th scope="col">Pack Size</th>
+                                            <!-- <th scope="col">Stock</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for record in orders %}
+                                        <!-- {% set outer_loop = loop %} -->
+                                            {% for data in record["data"] %}
+                                                <tr>
+                                                    <!-- <th scope="row">{{ outer_loop.index + loop.index }}</th> -->
+                                                    <td>{{ record["date"] }}</td>
+                                                    <td>{{ data["product_name"] }}</td>
+                                                    <td>{{ data["item_count"] }}</td>
+                                                    <td>{{ data["price"] }}</td>
+                                                    <td>{{ data["exp"] }}</td>
+                                                    <td>{{ data["pack_size"] }}</td>
+                                                    <!-- <td>{{ data["stock"] }}</td> -->
+                                                </tr>
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        {% endif %}
+
+
+        {% if not has_orders %}
+        <p style="font-size: 16px; color: rgb(216, 152, 251);">Unlock an exclusive offer just for you! We miss you and wanted to share something special.</p>
+        <br>
+        <p style="font-size: 11px;">Thank you for being a valued customer. We appreciate your support. Enjoy a special offer on your next purchase! </p>
+        {% endif %}
+
+        <br>
+        <hr />
+
+        
+
+        <p style="font-size: 8px;">
+            If you have any questions or concerns about your performance, please don't hesitate to contact us at
+            <b>support@Urahara.com </b>.
+            We're always here to help you improve!
+        </p>
+
+        <br />
+        <p style="font-size: 8px;">Regards, <br />Soul Society</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+[
+    {
+        "date": "23/11/2023,17:43:19",
+        "data": [
+            {
+                "item_id": 17,
+                "product_name": "item12",
+                "item_count": 1,
+                "price": 33,
+                "exp": "12/12/2023",
+                "pack_size": 2,
+                "stock": 1
+            },
+            {
+                "item_id": 22,
+                "product_name": "item14",
+                "item_count": 1,
+                "price": 33,
+                "exp": "12/12/2023",
+                "pack_size": 2,
+                "stock": 7
+            }
+        ]
+    },
+    {
+        "date": "23/11/2023,17:43:19",
+        "data": [
+            {
+                "item_id": 17,
+                "product_name": "item12",
+                "item_count": 1,
+                "price": 33,
+                "exp": "12/12/2023",
+                "pack_size": 2,
+                "stock": 1
+            },
+            {
+                "item_id": 22,
+                "product_name": "item14",
+                "item_count": 1,
+                "price": 33,
+                "exp": "12/12/2023",
+                "pack_size": 2,
+                "stock": 7
+            }
+        ]
+    },
+    {
+        "date": "23/11/2023,17:45:25",
+        "data": [
+            {
+                "item_id": 46,
+                "product_name": "item18",
+                "item_count": 1,
+                "price": 8,
+                "exp": "2023-11-14",
+                "pack_size": 6,
+                "stock": 7
+            }
+        ]
+    },
+    {
+        "date": "23/11/2023,17:45:54",
+        "data": [
+            {
+                "item_id": 22,
+                "product_name": "item14",
+                "item_count": 1,
+                "price": 33,
+                "exp": "12/12/2023",
+                "pack_size": 2,
+                "stock": 6
+            }
+        ]
+    }
+]
